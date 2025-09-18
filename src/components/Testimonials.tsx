@@ -66,7 +66,7 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers have to say about our services.
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about our services.
           </p>
         </div>
 
@@ -78,9 +78,9 @@ export default function Testimonials() {
                 <div className="flex justify-center mb-4">
                   {renderStars(testimonials[currentTestimonial].rating)}
                 </div>
-                <p className="text-lg text-gray-600 italic leading-relaxed">
-                  "{testimonials[currentTestimonial].text}"
-                </p>
+                        <p className="text-lg text-gray-600 italic leading-relaxed">
+                            &ldquo;{testimonials[currentTestimonial].text}&rdquo;
+                        </p>
               </div>
 
               <div className="border-t border-gray-200 pt-6">

@@ -46,7 +46,7 @@ export default function Contact() {
         message: '',
         service: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -75,7 +75,7 @@ export default function Contact() {
 
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                Thank you! We've received your message and will contact you within 24 hours.
+                Thank you! We&apos;ve received your message and will contact you within 24 hours.
               </div>
             )}
 
