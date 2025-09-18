@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProFix Contractors - Professional Home Services</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: white;
+            color: #1e3a8a;
+        }
+        .btn-primary:hover {
+            background: #f0f9ff;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+            transform: translateY(-2px);
+        }
+        .features {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+        .feature p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        .phone {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #dbeafe;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ProFix Contractors</h1>
+        <div class="subtitle">Professional Home Services</div>
+        <div class="description">
+            Expert plumbing, electrical, and roofing services with 15+ years of experience. 
+            Licensed, insured, and committed to quality workmanship.
+        </div>
+        
+        <div class="phone">📞 (385) 253-2721</div>
+        
+        <div class="buttons">
+            <a href="http://localhost:3000" class="btn btn-primary" target="_blank">
+                🚀 Open Full Website
+            </a>
+            <button onclick="startDevServer()" class="btn btn-secondary">
+                ⚡ Start Development Server
+            </button>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🔧 Plumbing</h3>
+                <p>Emergency repairs, installations, and maintenance</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Electrical</h3>
+                <p>Licensed electricians for safe, reliable work</p>
+            </div>
+            <div class="feature">
+                <h3>🏠 Roofing</h3>
+                <p>Professional roofing services and storm damage repair</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startDevServer() {
+            alert('To start the development server, open your terminal and run:\n\nnpm run dev\n\nThen click "Open Full Website" to view the complete site!');
+        }
+        
+        // Auto-refresh check for localhost:3000
+        function checkServer() {
+            fetch('http://localhost:3000')
+                .then(response => {
+                    if (response.ok) {
+                        document.querySelector('.btn-primary').style.background = '#10b981';
+                        document.querySelector('.btn-primary').textContent = '✅ Website Ready - Click to View!';
+                    }
+                })
+                .catch(() => {
+                    // Server not running yet
+                });
+        }
+        
+        // Check every 3 seconds
+        setInterval(checkServer, 3000);
+    </script>
+</body>
+</html>

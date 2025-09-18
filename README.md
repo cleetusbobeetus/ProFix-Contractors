@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ProFix Contractors Website
+
+A professional, mobile-first contractor website built with Next.js 15, React 19, and TailwindCSS 4.
+
+## Features
+
+- **Hero Section**: Business branding, service tagline, phone number, and prominent CTA
+- **Services Section**: Three main service cards (Plumbing, Electrical, Roofing) with detailed features
+- **Testimonials Carousel**: Interactive customer reviews with auto-rotation and manual navigation
+- **Before/After Gallery**: Filterable project showcase with category filtering
+- **Contact Form**: Comprehensive contact form with service selection and validation
+- **Responsive Design**: Mobile-first approach with seamless desktop experience
+- **Professional Styling**: Blue/white color palette with trustworthy, clean design
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Frontend**: React 19 with TypeScript
+- **Styling**: TailwindCSS 4
+- **Icons**: Heroicons (SVG)
+- **Fonts**: Geist Sans & Geist Mono
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd contractor-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles and TailwindCSS imports
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main page component
+└── components/
+    ├── Hero.tsx             # Hero section with navigation
+    ├── Services.tsx         # Services showcase
+    ├── Testimonials.tsx     # Customer reviews carousel
+    ├── Gallery.tsx          # Before/after project gallery
+    ├── Contact.tsx          # Contact form and information
+    └── Footer.tsx           # Footer with links and company info
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Hero Section
+- Responsive navigation with mobile menu
+- Business branding and trust indicators
+- Prominent call-to-action buttons
+- Statistics showcase (years experience, customers, etc.)
 
-## Deploy on Vercel
+### Services Section
+- Three main service categories with detailed features
+- Interactive service cards with hover effects
+- Bundle pricing call-to-action
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Testimonials
+- Auto-rotating carousel with manual navigation
+- Star ratings and customer details
+- Trust badges and certifications
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Gallery
+- Filterable project showcase
+- Before/after image comparisons
+- Category-based filtering system
+
+### Contact Form
+- Comprehensive form with validation
+- Service selection dropdown
+- Business hours and emergency contact info
+- Form submission handling with success/error states
+
+## Customization
+
+### Colors
+The website uses a professional blue/white color palette defined in TailwindCSS:
+- Primary: Blue-600 (#2563eb)
+- Secondary: Blue-900 (#1e3a8a)
+- Accent: Blue-200 (#dbeafe)
+- Background: Gray-50 (#f9fafb)
+
+### Content
+Update the following files to customize content:
+- `src/components/Hero.tsx` - Business name, tagline, phone number
+- `src/components/Services.tsx` - Service descriptions and features
+- `src/components/Testimonials.tsx` - Customer reviews
+- `src/components/Gallery.tsx` - Project showcase
+- `src/components/Contact.tsx` - Contact information and form
+
+### Styling
+All styling is handled through TailwindCSS classes. The design is fully responsive and follows mobile-first principles.
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with zero configuration
+
+### Other Platforms
+The project can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## Performance Features
+
+- **Image Optimization**: Next.js automatic image optimization
+- **Code Splitting**: Automatic code splitting for optimal loading
+- **SEO Optimized**: Proper meta tags and structured data
+- **Mobile Performance**: Optimized for mobile devices
+- **Accessibility**: WCAG compliant components
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For support or questions about this website template, please contact the development team.
